@@ -1,14 +1,14 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
-const signInFormSchema = z.object({
+export const signInFormSchema = z.object({
   email: z.email('Invalid email address'),
   password: z
     .string('Password is required')
     .min(8, 'Password must be at least 8 characters')
     .max(16, 'Password must be less than 16 characters'),
-});
+})
 
-const signUpFormSchema = z.object({
+export const signUpFormSchema = z.object({
   fullName: z
     .string('Full name is required')
     .min(2, 'Full name must be at least 2 characters')
@@ -18,6 +18,14 @@ const signUpFormSchema = z.object({
     .string('Password is required')
     .min(8, 'Password must be at least 8 characters')
     .max(16, 'Password must be less than 16 characters'),
-});
+})
 
-export { signInFormSchema, signUpFormSchema };
+export const verifyOtpFormSchema = z.object({
+  otp: z
+    .string('Verification code is required')
+    .length(6, 'Verification code must be 6 characters'),
+})
+
+export const forgotPasswordFormSchema = z.object({
+  email: z.email('Invalid email address'),
+})

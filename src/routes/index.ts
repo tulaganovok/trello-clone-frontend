@@ -5,6 +5,7 @@ import Auth from '../layouts/auth'
 import SignIn from '../pages/sign-in'
 import SignUp from '../pages/sign-up'
 import Dashboard from '../layouts/dashboard'
+import ForgotPassword from '../pages/forgot-password'
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
     children: [
       { path: '/sign-in', Component: SignIn },
       { path: '/sign-up', Component: SignUp },
+      { path: '/forgot-password', Component: ForgotPassword },
     ],
   },
   {

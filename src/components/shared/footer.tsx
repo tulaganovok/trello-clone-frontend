@@ -3,7 +3,7 @@ import Logo from './logo'
 
 export default function Footer() {
   return (
-    <div className='fixed bottom-0 w-full p-4 border-t bg-slate-100'>
+    <div className='fixed bottom-0 w-full p-4 border-t'>
       <div className='md:max-w-7xl mx-auto flex items-center w-full justify-between'>
         <Logo imgWidth={30} imgHeight={30} textSize='lg' />
 

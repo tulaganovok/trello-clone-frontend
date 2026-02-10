@@ -1,7 +1,12 @@
-import { z } from "zod";
-import { signInFormSchema, signUpFormSchema } from "./validations";
+import { z } from 'zod'
+import {
+  forgotPasswordFormSchema,
+  signInFormSchema,
+  signUpFormSchema,
+  verifyOtpFormSchema,
+} from './validations'
 
-type SignInFormSchema = z.infer<typeof signInFormSchema>;
-type SignUpFormSchema = z.infer<typeof signUpFormSchema>;
-
-export { type SignInFormSchema, type SignUpFormSchema };
+export type SignInFormSchema = z.infer<typeof signInFormSchema>
+export type SignUpFormSchema = z.infer<typeof signUpFormSchema>
+export type VerifyOtpFormSchema = z.infer<typeof verifyOtpFormSchema>
+export type ForgotPasswordFormSchema = z.infer<typeof forgotPasswordFormSchema>
